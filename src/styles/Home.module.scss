@@ -1,0 +1,60 @@
+@import 'vars.scss';
+
+.main {
+  width: 1374px;
+  max-width: 1374px;
+  background-image: url('../../public/MaskGroup1.png');
+  background-repeat: no-repeat;
+
+  & .landingPage {
+    height: 761px;
+
+    & .up {
+      padding-block-start: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-items: center;
+    }
+
+    & .center {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      & .text {
+        font-size: 3em;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & .textOne,
+        & .textThree,
+        & .textFour .labs {
+          color: $white;
+        }
+
+        & .textTwo,
+        & .textFour .atomic {
+          color: $orange;
+        }
+
+        & .textOne, & .textTwo, & .textThree, & .textFour {
+          margin: 0;
+        }
+      }
+    }
+
+    & .down {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & p {
+        color: $white;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

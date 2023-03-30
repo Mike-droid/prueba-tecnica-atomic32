@@ -1,0 +1,12 @@
+@import '../vars.scss';
+
+.whiteButton {
+  background-color: $white;
+  text-decoration: none;
+  color: rgb(57, 97, 158);
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding-inline: 40px;
+  padding-block: 5px;
+  border-radius: 20px;
+}
