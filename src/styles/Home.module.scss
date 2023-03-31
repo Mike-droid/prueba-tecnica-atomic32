@@ -40,10 +40,6 @@
         & .textFour .atomic {
           color: $orange;
         }
-
-        & .textOne, & .textTwo, & .textThree, & .textFour {
-          margin: 0;
-        }
       }
     }
 
@@ -55,7 +51,6 @@
       & p {
         color: $white;
         font-size: 1.2rem;
-        margin: 0;
       }
     }
   }
@@ -75,7 +70,6 @@
       }
 
       & h2 {
-        margin: 0;
         font-size: 3rem;
       }
     }
@@ -86,6 +80,22 @@
       justify-content: center;
       margin-block-start: 50px;
       align-items: center;
+    }
+  }
+
+  & .process {
+    background-color: $dark-blue;
+
+
+    & .processTitle {
+
+      & .love {
+        color: $white;
+      }
+
+      & .withUs {
+        color: $orange;
+      }
     }
   }
 }

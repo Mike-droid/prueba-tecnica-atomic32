@@ -13,7 +13,7 @@ export const Card = ({ image, title, list, backgroundColor, lineColor, textColor
       <h3 style={{ color: lineColor }} className={styles.title}>
         {title}
       </h3>
-      <ul>
+      <ul className={styles.list}>
         {list.map((item, index) => (
           <li key={index} style={{ color: textColor }}>
             {item}

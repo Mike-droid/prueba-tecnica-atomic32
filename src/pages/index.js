@@ -92,7 +92,12 @@ export default function Home() {
         <div>
         </div>
       </section>
-      <section className={styles.process}></section>
+      <section className={styles.process}>
+        <div className={styles.processTitle}>
+          <h2 className={styles.love}>¡TE ENCANTARÁ</h2>
+          <h2 className={styles.withUs}>TRABAJAR CON NOSOTROS!</h2>
+        </div>
+      </section>
       <section className={styles.whyUs}></section>
       <section className={styles.table}></section>
       <MyFooter />
