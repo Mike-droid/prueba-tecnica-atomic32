@@ -33,7 +33,7 @@ export default function Celular() {
         <label htmlFor="celular">
           Número de celular
         </label>
-        <input type="tel" id="celular" pattern="[0-9]{10}" onChange={handlePhoneChange} required />
+        <input type="tel" id="celular" pattern="[0-9]{10}" value={phone} onChange={handlePhoneChange} required />
         <OrangeButton
           text='Continuar'
           disabled={phoneError}
