@@ -21,7 +21,7 @@ export default function Verificacion() {
   const nextPage = () => {
     setShowModal(true)
     setTimeout(() => {
-      window.location.href = '/pasos/final/'
+      window.location.href = '/pasos/terminos/'
     }, 3000)
   }
 
