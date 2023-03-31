@@ -1,5 +1,5 @@
-export const OrangeButton = ({ text, enabled, func }) => {
+export const OrangeButton = ({ text, disabled, func }) => {
   return (
-    <button disabled={enabled} onClick={func}>{text}</button>
+    <button disabled={disabled} onClick={func}>{text}</button>
   )
 }

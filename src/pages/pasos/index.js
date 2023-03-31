@@ -5,8 +5,8 @@ import { OrangeButton } from "@/components/orangeButton";
 export default function Pasos() {
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
-  const [errorNombre, setErrorNombre] = useState(false);
-  const [errorApellido, setErrorApellido] = useState(false);
+  const [errorNombre, setErrorNombre] = useState(true);
+  const [errorApellido, setErrorApellido] = useState(true);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -29,7 +29,7 @@ export default function Pasos() {
   }
 
   return (
-    <div>
+    <>
       <ProgressBar level='20' />
       <h1>Te queremos conocer</h1>
       <p>Queremos saber quien eres tú, por favor ingresa los siguientes datos:</p>
@@ -37,7 +37,7 @@ export default function Pasos() {
           <label htmlFor="nombres">
             Nombre(s)
           </label>
-          <input type="text" id="nombres" onChange={handleChangeNombre} value={nombre} />
+          <input type="text" id="nombres" onChange={handleChangeNombre} value={nombre} required/>
           {
             errorNombre ? <p className="error">El nombre debe tener al menos 5 caracteres</p> : null
           }
@@ -45,16 +45,16 @@ export default function Pasos() {
           <label htmlFor="apellidos">
             Apellidos
           </label>
-          <input type="text" id="apellidos" onChange={handleChangeApellido} value={apellido} />
+          <input type="text" id="apellidos" onChange={handleChangeApellido} value={apellido} required/>
           {
             errorApellido ? <p className="error">El apellido debe tener al menos 5 caracteres</p> : null
           }
           <OrangeButton
             text='Enviar'
-            enabled={errorNombre || errorApellido}
+            disabled={errorNombre || errorApellido}
             func={nextPage}
           />
       </form>
-    </div>
+    </>
   );
 }
