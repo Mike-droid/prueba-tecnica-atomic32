@@ -1,0 +1,46 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & .linesContainer {
+    margin-block-start: 20px;
+    display: flex;
+    flex-direction: row;
+
+    & .line {
+      width: 40px;
+      height: 3px;
+      border-radius: 5px;
+    }
+
+    & .lineCenter {
+      width: 7px;
+      height: 3px;
+      border-radius: 5px;
+      margin-inline: 10px;
+    }
+  }
+
+  & .title {
+    font-size: 2rem;
+    margin: 0;
+    margin-block-start: 10px;
+  }
+
+}
+
+.leftBorderRadius {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.rightBorderRadius {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.allBorderRadius {
+  border-radius: 5px;
+}
