@@ -6,7 +6,6 @@ import { GoBack } from "@/components/GoBack"
 export default function Celular() {
   const [phone, setPhone] = useState('')
   const [phoneError, setPhoneError] = useState(true)
-  const [showModal, setShowModal] = useState(false)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,10 +17,7 @@ export default function Celular() {
   }
 
   const nextPage = () => {
-    setShowModal(true)
-    setTimeout(()=> {
-      window.location.href = '/pasos/verificacion/'
-    }, 2500)
+    window.location.href = '/pasos/verificacion/'
   }
 
   return (
@@ -29,7 +25,7 @@ export default function Celular() {
       <GoBack link='/pasos/'></GoBack>
       <br />
       <ProgressBar level='40'></ProgressBar>
-      <h1>Valida tu celular</h1>
+      <h1>Edita tu celular</h1>
       <p>Necesitamos validar tu número para continuar</p>
       <p>Ingresa tu número a 10 dígitos y te enviaremos un código SMS.</p>
       <form onSubmit={handleSubmit}>
@@ -43,12 +39,6 @@ export default function Celular() {
           func={nextPage}
         />
       </form>
-      {
-        showModal &&
-        <div>
-          <h3>Te hemos enviado el código al número que nos proporcionaste</h3>
-        </div>
-      }
     </>
   )
 }

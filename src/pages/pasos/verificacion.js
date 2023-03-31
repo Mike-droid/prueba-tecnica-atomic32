@@ -2,6 +2,7 @@ import { useState } from "react";
 import { GoBack } from "@/components/GoBack";
 import { OrangeButton } from "@/components/orangeButton";
 import { ProgressBar } from "@/components/ProgressBar";
+import Link from "next/link";
 
 export default function Verificacion() {
   const [codigo, setCodigo] = useState('')
@@ -33,6 +34,7 @@ export default function Verificacion() {
       <h1>Código de verificación</h1>
       <p>Te enviamos un SMS al número:</p>
       <p>+52 55 1850 9196</p>
+      <Link href='/pasos/editaCelular'>Editar número</Link>
       <p>Ingresa el código de verificación:</p>
       <form onSubmit={handleSubmit}>
         <label htmlFor="codigo">
@@ -49,7 +51,7 @@ export default function Verificacion() {
       {
         showModal &&
         <div>
-          <h3>Hemos enviado el código</h3>
+          <h3>Hemos validado el código</h3>
         </div>
       }
     </>
