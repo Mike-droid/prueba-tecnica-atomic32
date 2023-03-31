@@ -41,7 +41,7 @@ export default function Home() {
               <span className={styles.atomic}>ATOMIC</span>
               <span className={styles.labs}>LABS</span>
             </p>
-            <WhiteButton text='¡Quiero ser parte!' link='#' />
+            <WhiteButton text='¡Quiero ser parte!' link='/pasos/' />
           </div>
         </div>
         <div className={styles.down}>
